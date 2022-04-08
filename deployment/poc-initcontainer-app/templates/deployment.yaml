@@ -26,13 +26,13 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           args: "EventBus:Internal"
           env:
-          {{- include "helpers.list-env-variables" . | indent 6 }}
+            {{- include "helpers.list-env-variables" . | indent 6 }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.initContainer.repository }}:{{ .Values.initContainer.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-          {{- include "helpers.list-env-variables" . | indent 6 }}
+            {{- include "helpers.list-env-variables" . | indent 6 }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
