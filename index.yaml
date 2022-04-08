@@ -3,12 +3,12 @@ entries:
   poc-initcontainer-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-04-08T07:47:22.271391109Z"
+    created: "2022-04-08T08:12:18.585231487Z"
     description: A Helm chart for Kubernetes
-    digest: 2f7777f31b25e454daacbf22dfd25b1df8b86773c5098dc2fda8b8d7cae5c85e
+    digest: e91fffa61aa94e6ab6266767d2648a63f14a6660745a104a5c31a87ace772176
     name: poc-initcontainer-app
     type: application
     urls:
     - https://cciobanu98.github.io/poc-init-container/poc-initcontainer-app-0.1.0.tgz
     version: 0.1.0
-generated: "2022-04-08T07:47:22.270232317Z"
+generated: "2022-04-08T08:12:18.584559987Z"
