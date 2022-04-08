@@ -22,13 +22,13 @@ spec:
     spec:
       initContainers:
         - name: "{{ .Chart.Name }}-internal-event-bus-init"
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "{{ .Values.initContainer.repository }}:{{ .Values.initContainer.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.initContainer.pullPolicy }}
           env:
             {{- include "helpers.list-env-variables" . | indent 6 }}
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.initContainer.repository }}:{{ .Values.initContainer.tag | default .Chart.AppVersion }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             {{- include "helpers.list-env-variables" . | indent 6 }}
