@@ -93,4 +93,4 @@ secret:
   name: app-env-var-secret
 env:
   secret:
-    EventBus__Internal__PubSubName:
+    EventBus__Internal__PubSubName: ""
