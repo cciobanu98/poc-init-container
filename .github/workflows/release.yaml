@@ -28,7 +28,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           file: src/PoC.Tenant/Dockerfile
-          context: src
+          context: Poc.InitContainers/Dockerfile
           push: true
           tags: ${{ steps.meta-app.outputs.tags }}
           labels: ${{ steps.meta-app.outputs.labels }}

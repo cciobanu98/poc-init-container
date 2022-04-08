@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Poc.InitContainers": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
